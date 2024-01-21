@@ -1,4 +1,4 @@
-package com.devtomashov.ccq.data
+package com.devtomashov.ccq.domain
 
 data class Quote(
     val positionCC: Int,
