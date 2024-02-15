@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 class ConverterViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is converter Fragment"
     }
-    val text: LiveData<String> = _text
+    val converter: LiveData<String> = _text
 }
