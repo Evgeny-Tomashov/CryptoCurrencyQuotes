@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.devtomashov.ccq.R
-import com.devtomashov.ccq.data.Quote
+import com.devtomashov.ccq.domain.Quote
 import com.devtomashov.ccq.ui.rv_viewholders.QuoteViewHolder
 
 //В параметр передаем слушатель, чтобы мы потом могли обрабатывать нажатия из класса Activity
@@ -17,7 +17,7 @@ class QuoteRecyclerAdapter(private val clickListener: OnItemClickListener) : Rec
 
     //В этом методе мы привязываем наш ViewHolder и передаем туда "надутую" верстку котировки
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return QuoteViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.quote, parent, false))
+        return QuoteViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.quote_item, parent, false))
     }
 
     //В этом методе будет привязка полей из объекта Quote к View из quote.xml

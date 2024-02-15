@@ -13,13 +13,16 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/item_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="15dp">
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
 
             <TextView
                 android:id="@+id/positionCC"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="positionCC" />
@@ -28,6 +31,8 @@
                 android:id="@+id/nameCC"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/black"
                 app:layout_constraintLeft_toRightOf="@id/positionCC"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="nameCC" />
@@ -36,6 +41,8 @@
                 android:id="@+id/priceCC"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/black"
                 app:layout_constraintLeft_toRightOf="@id/nameCC"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="priceCC" />
@@ -44,7 +51,9 @@
                 android:id="@+id/changePriceCC24"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintLeft_toRightOf="@id/priceCC"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/priceCC"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="changePriceCC24" />
 
@@ -52,7 +61,9 @@
                 android:id="@+id/marketCapCC"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintLeft_toRightOf="@id/changePriceCC24"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/changePriceCC24"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="marketCapCC" />
 

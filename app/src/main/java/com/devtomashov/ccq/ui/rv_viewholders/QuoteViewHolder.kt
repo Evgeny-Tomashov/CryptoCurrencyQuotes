@@ -2,12 +2,12 @@ package com.devtomashov.ccq.ui.rv_viewholders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.devtomashov.ccq.data.Quote
-import com.devtomashov.ccq.databinding.QuoteBinding
+import com.devtomashov.ccq.domain.Quote
+import com.devtomashov.ccq.databinding.QuoteItemBinding
 
 class QuoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    val quoteBinding = QuoteBinding.bind(itemView)
+    val quoteBinding = QuoteItemBinding.bind(itemView)
 
     //Привязываем View из layout quote.xml к переменным
     fun bind(quote: Quote) {
