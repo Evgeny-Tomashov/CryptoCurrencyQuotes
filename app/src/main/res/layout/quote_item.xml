@@ -8,6 +8,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
         app:cardCornerRadius="5dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,9 +20,9 @@
 
             <TextView
                 android:id="@+id/positionCC"
-                android:layout_width="0dp"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/black"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -29,9 +30,9 @@
 
             <TextView
                 android:id="@+id/nameCC"
-                android:layout_width="0dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/black"
                 app:layout_constraintLeft_toRightOf="@id/positionCC"
                 app:layout_constraintTop_toTopOf="parent"
@@ -39,9 +40,9 @@
 
             <TextView
                 android:id="@+id/priceCC"
-                android:layout_width="0dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/black"
                 app:layout_constraintLeft_toRightOf="@id/nameCC"
                 app:layout_constraintTop_toTopOf="parent"
@@ -49,9 +50,9 @@
 
             <TextView
                 android:id="@+id/changePriceCC24"
-                android:layout_width="0dp"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/priceCC"
                 app:layout_constraintTop_toTopOf="parent"
@@ -59,9 +60,9 @@
 
             <TextView
                 android:id="@+id/marketCapCC"
-                android:layout_width="0dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="20dp"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/changePriceCC24"
                 app:layout_constraintTop_toTopOf="parent"
