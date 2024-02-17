@@ -15,8 +15,19 @@ class QuotesFragmentViewModel : ViewModel() {
 
     init {
         App.instance.dagger.inject(this)
-        val quotes = interactor.getQuotes()
-        quotesListLiveData.postValue(quotes)
+        interactor.getQuotesFromApi(object : ApiCallback {
+            override fun onSuccess(quotes: List<Quote>) {
+                quotesListLiveData.postValue(quotes)
+            }
+
+            override fun onFailure() {
+            }
+        })
+    }
+
+    interface ApiCallback {
+        fun onSuccess(quotes: List<Quote>)
+        fun onFailure()
     }
 }
 

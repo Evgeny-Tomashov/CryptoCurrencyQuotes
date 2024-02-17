@@ -1,6 +1,7 @@
 package com.devtomashov.ccq.di
 
 import com.devtomashov.ccq.data.MainRepository
+import com.devtomashov.ccq.data.QuoteApi
 import com.devtomashov.ccq.domain.Interactor
 import dagger.Module
 import dagger.Provides
@@ -10,5 +11,6 @@ import javax.inject.Singleton
 class DomainModule {
     @Singleton
     @Provides
-    fun provideInteractor(repository: MainRepository) = Interactor(repo = repository)
+    fun provideInteractor(repository: MainRepository, quoteApi: QuoteApi) =
+        Interactor(repo = repository, retrofitService = quoteApi)
 }

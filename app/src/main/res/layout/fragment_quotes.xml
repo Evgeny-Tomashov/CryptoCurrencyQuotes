@@ -4,7 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_500"
     tools:context=".ui.quotes.QuotesFragment">
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/background_search_view"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 
     <LinearLayout
         android:id="@+id/head_table"
@@ -14,15 +25,13 @@
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         app:layout_constraintBottom_toTopOf="@+id/recycler_container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/search_view">
 
         <TextView
             android:id="@+id/head_positionCC"
-            android:layout_width="15dp"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="10dp"
             android:text="#"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -31,7 +40,7 @@
 
         <TextView
             android:id="@+id/head_nameCC"
-            android:layout_width="50dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="Name"
@@ -45,7 +54,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Price"
+            android:text="Price, USD"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintLeft_toRightOf="@id/nameCC"
@@ -53,9 +62,9 @@
 
         <TextView
             android:id="@+id/head_changePriceCC24"
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="10dp"
             android:text="24h %"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -64,10 +73,10 @@
 
         <TextView
             android:id="@+id/head_marketCapCC"
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="MarketCap"
+            android:text="MarketCap, USD"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintLeft_toRightOf="@id/changePriceCC24"
