@@ -1,9 +1,10 @@
 package com.devtomashov.ccq.domain
 
-import com.devtomashov.ccq.data.Assets
+import com.devtomashov.ccq.data.entity.Assets
 import com.devtomashov.ccq.data.Converter
 import com.devtomashov.ccq.data.MainRepository
 import com.devtomashov.ccq.data.QuoteApi
+import com.devtomashov.ccq.data.entity.Quote
 import com.devtomashov.ccq.ui.quotes.QuotesFragmentViewModel
 import retrofit2.Call
 import retrofit2.Callback
@@ -19,7 +20,12 @@ class Interactor(private val repo: MainRepository, private val retrofitService: 
                 response: Response<Assets>
             ) {
                 //При успехе мы вызываем метод передаем onSuccess и в этот коллбэк список фильмов
-                callback.onSuccess(Converter.convertApiListToDtoList(response.body()?.data))
+                val list = Converter.convertApiListToDtoList(response.body()?.data)
+                //Кладем фильмы в бд
+                list.forEach {
+                    repo.putToDb(list)
+                }
+                callback.onSuccess(list)
             }
 
             override fun onFailure(call: Call<Assets>, t: Throwable) {
@@ -28,4 +34,8 @@ class Interactor(private val repo: MainRepository, private val retrofitService: 
             }
         })
     }
+
+    fun getQuotesFromDb(): List<Quote> = repo.getAllFromDb()
+
+
 }

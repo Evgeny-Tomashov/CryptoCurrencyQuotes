@@ -1,4 +1,4 @@
-package com.devtomashov.ccq.data
+package com.devtomashov.ccq.data.entity
 
 data class Data(
     val changePercent24Hr: Double,
