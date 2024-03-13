@@ -2,21 +2,13 @@ package com.devtomashov.ccq.ui.quotes
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
-import androidx.core.view.MenuHost
-import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.devtomashov.ccq.R
-import com.devtomashov.ccq.domain.Quote
+import com.devtomashov.ccq.data.entity.Quote
 import com.devtomashov.ccq.databinding.FragmentQuotesBinding
 import com.devtomashov.ccq.ui.rv_adapters.QuoteRecyclerAdapter
 import java.util.Locale
