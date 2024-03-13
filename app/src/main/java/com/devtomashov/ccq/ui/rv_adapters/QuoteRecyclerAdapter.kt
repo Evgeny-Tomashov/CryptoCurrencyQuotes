@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.devtomashov.ccq.R
-import com.devtomashov.ccq.domain.Quote
+import com.devtomashov.ccq.data.entity.Quote
 import com.devtomashov.ccq.ui.rv_viewholders.QuoteViewHolder
 
 //В параметр передаем слушатель, чтобы мы потом могли обрабатывать нажатия из класса Activity

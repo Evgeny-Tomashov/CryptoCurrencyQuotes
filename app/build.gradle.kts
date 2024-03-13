@@ -59,6 +59,7 @@ dependencies {
     //Dagger
     implementation("com.google.dagger:dagger:2.44.2")
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
+    implementation("androidx.room:room-common:2.6.1")
     kapt("com.google.dagger:dagger-compiler:2.44.2")
     //kapt("groupId:artifactId:version")
     testImplementation("junit:junit:4.13.2")
@@ -72,5 +73,8 @@ dependencies {
     //Material
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
     implementation("com.google.android.material:material:1.11.0")
+    //Room
+    implementation("androidx.room:room-runtime:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
 
 }

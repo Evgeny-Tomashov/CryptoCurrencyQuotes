@@ -2,7 +2,7 @@ package com.devtomashov.ccq.ui.rv_viewholders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.devtomashov.ccq.domain.Quote
+import com.devtomashov.ccq.data.entity.Quote
 import com.devtomashov.ccq.databinding.QuoteItemBinding
 import kotlin.math.roundToInt
 
