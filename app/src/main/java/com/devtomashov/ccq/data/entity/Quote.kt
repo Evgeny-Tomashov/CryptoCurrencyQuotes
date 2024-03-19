@@ -17,5 +17,5 @@ data class Quote(
     @ColumnInfo(name = "priceCC") val priceCC: Double,
     @ColumnInfo(name = "changePriceCC24") val changePriceCC24: Double,
     @ColumnInfo(name = "marketCapCC") val marketCapCC: Double,
-    var isInFavorites: Boolean = false
+    @ColumnInfo(name = "isInFavorites") var isInFavorites: Boolean = false
 ) : Parcelable

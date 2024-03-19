@@ -28,6 +28,12 @@ class QuoteRecyclerAdapter(private val clickListener: OnItemClickListener) : Rec
                 //Вызываем метод bind(), который мы создали, и передаем туда объект
                 //из нашей базы данных с указанием позиции
                 holder.bind(items[position])
+                //Обрабатываем нажатие на весь элемент целиком(можно сделать на отдельный элемент
+                //например, картинку) и вызываем метод нашего листенера, который мы получаем из
+                //конструктора адаптера
+                holder.quoteBinding.itemContainer.setOnClickListener {
+                    clickListener.click(items[position])
+                }
             }
         }
     }
