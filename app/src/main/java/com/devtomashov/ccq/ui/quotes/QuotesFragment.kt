@@ -8,12 +8,13 @@ import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.devtomashov.ccq.MainActivity
 import com.devtomashov.ccq.data.entity.Quote
 import com.devtomashov.ccq.databinding.FragmentQuotesBinding
 import com.devtomashov.ccq.ui.rv_adapters.QuoteRecyclerAdapter
 import java.util.Locale
 
-@Suppress("UNREACHABLE_CODE")
+
 class QuotesFragment : Fragment() {
     private val quotesViewModel by lazy {
         ViewModelProvider.NewInstanceFactory().create(QuotesFragmentViewModel::class.java)
@@ -48,8 +49,6 @@ class QuotesFragment : Fragment() {
         return root
 
     }
-
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -98,11 +97,10 @@ class QuotesFragment : Fragment() {
     private fun initRecycler() {
         //находим наш RV
         binding.quotesRecycler.apply {
-            //Инициализируем наш адаптер в конструктор передаем анонимно инициализированный интерфейс,
-            //оставим его пока пустым, он нам понадобится позже
+            //Инициализируем наш адаптер
             quotesAdapter = QuoteRecyclerAdapter(object : QuoteRecyclerAdapter.OnItemClickListener {
                 override fun click(quote: Quote) {
-                    TODO("Not yet implemented")
+                    (requireActivity() as MainActivity).launchDetailsFragment(quote)
                 }
             })
             //Присваиваем адаптер
