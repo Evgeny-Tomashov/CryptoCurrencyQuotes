@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.devtomashov.ccq.R
 import com.devtomashov.ccq.data.entity.Quote
 import com.devtomashov.ccq.databinding.FragmentDetailsBinding
+import com.devtomashov.ccq.ui.notifications.NotificationHelper
 import kotlin.math.roundToInt
 
 
@@ -33,7 +34,6 @@ class DetailsFragment : Fragment() {
 
         _binding = FragmentDetailsBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
 
         detailsViewModel.details.observe(viewLifecycleOwner) {
 
@@ -70,6 +70,10 @@ class DetailsFragment : Fragment() {
             intent.type = "text/plain"
             //Запускаем наше активити
             startActivity(Intent.createChooser(intent, "Share To:"))
+        }
+
+        binding.detailsFabTradeLater.setOnClickListener {
+            NotificationHelper.notificationSet(requireContext(), quote)
         }
     }
 
