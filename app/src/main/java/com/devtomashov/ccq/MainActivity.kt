@@ -1,6 +1,8 @@
 package com.devtomashov.ccq
 
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.widget.Switch
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -12,6 +14,7 @@ import com.devtomashov.ccq.ui.converter.ConverterFragment
 import com.devtomashov.ccq.ui.details.DetailsFragment
 import com.devtomashov.ccq.ui.favourites.FavouritesFragment
 import com.devtomashov.ccq.ui.quotes.QuotesFragment
+import com.devtomashov.ccq.ui.settings.SettingsFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -77,6 +80,13 @@ class MainActivity : AppCompatActivity() {
                     val tag = "watch_later"
                     val fragment = checkFragmentExistence(tag)
                     changeFragment(fragment ?: FavouritesFragment(), tag)
+                    true
+                }
+
+                R.id.navigation_settings -> {
+                    val tag = "settings"
+                    val fragment = checkFragmentExistence(tag)
+                    changeFragment(fragment ?: SettingsFragment(), tag)
                     true
                 }
 

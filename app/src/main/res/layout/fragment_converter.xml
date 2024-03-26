@@ -47,7 +47,8 @@
             android:layout_height="wrap_content"
             android:text="change places"
             android:textColor="@color/purple_500"
-            android:textSize="10sp" />
+            android:backgroundTint="@color/black"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/currency2"
